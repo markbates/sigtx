@@ -1,4 +1,4 @@
-# sigtx
+# sigtx [![Build Status](https://travis-ci.org/markbates/sigtx.svg?branch=master)](https://travis-ci.org/markbates/sigtx)
 
 This package provides an implementation proposal for this Go proposal: [https://github.com/golang/go/issues/21521](https://github.com/golang/go/issues/21521).
 
