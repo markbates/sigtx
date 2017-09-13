@@ -10,13 +10,14 @@ package main
 import (
 	"context"
 	"fmt"
-	"os"
+  "os"
+  "syscall"
 
 	"github.com/markbates/sigtx"
 )
 
 func main() {
-	ctx, cancel := sigtx.WithCancel(context.Background(), os.Interrupt)
+	ctx, cancel := sigtx.WithCancel(context.Background(), os.Interrupt, syscall.SIGTERM, syscall.SIGKILL)
 	defer cancel()
 	select {
 	case <-ctx.Done():
